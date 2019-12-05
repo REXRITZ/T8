@@ -44,17 +44,18 @@ int main()
     loop(i,n) {
         cin>>wt[i]>>val[i];
     }
+    cout<<"\nEnter max weight : ";
     cin>>w;
     bubblesort(wt,val,n);
     knapsack(val,wt,ratio,w,n);
     double ans=0.0;
     cout<<"\nRatio array is : ";
     loop(i,n) cout<<ratio[i]<<" ";
-    cout<<"Weights in knapsack are : ";
+    cout<<"\nWeights in knapsack are : ";
     loop(i,n) {
         if(ratio[i]>0.0) {
             cout<<wt[i]<<" ";
-            ans += wt[i]*ratio[i];
+            ans += val[i]*ratio[i];
         }
     }
     cout<<"\nTotal profit is : ";
