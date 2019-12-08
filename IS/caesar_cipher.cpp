@@ -18,8 +18,11 @@ int main() {
     cout<<"\nShift : ";
     cin>>shift;
     cout<<"Cipher Text : ";
+    //Finding cipher text
     for(int i=0;i<s.size();i++) {
+        //If condition to check whether entered char is an alphabet or a number
     if(((int)s[i] >= 48 && (int)s[i] <= 57)|| ((int)s[i]>=97 && (int)s[i]<=122)) {
+        
         if((int)s[i] >= 48 && (int)s[i] <= 57) {
             stringstream ss;
             ss<<s[i];
@@ -38,7 +41,9 @@ int main() {
     cout<<"\nDeciphering..";
     Sleep(3000);
     cout<<"\nDecrypted text is : ";
+    //Decrypting to plaintext
     for(int i=0;i<s.size();i++) {
+        //If condition to check whether entered char is an alphabet or a number
     if(((int)s[i] >= 48 && (int)s[i] <= 57)|| ((int)s[i]>=97 && (int)s[i]<=122)) {
         if((int)s[i] >= 48 && (int)s[i] <= 57) {
             stringstream ss;
